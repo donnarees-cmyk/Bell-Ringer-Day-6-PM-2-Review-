@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- BELL WORK DAY 6 | Skills: ELA.6.R.3.3 Compare Authors Across Time / ELA.6.R.1.2 Theme / ELA.6.R.3.1 Figurative Language -->
+<title>Bell Work Day 6: Then vs. Now & Mixed Review</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1d2a5b; --gold:#f2b632; --gold-soft:#fff4d6; --bg:#f6f3ff; --card:#ffffff;
+  --ink:#1f2433; --muted:#5b6275; --green:#1f9d55; --green-soft:#e3f7ea; --red:#d64545; --red-soft:#fde8e8;
+  --day:#8b5cf6; --line:#e3e0ef;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;font-size:18px;line-height:1.55}
+h1,h2,h3{font-family:'Fredoka',system-ui,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:16px}
+header{text-align:center;padding:18px 16px 4px}
+#logo{max-width:240px;width:55%;height:auto;display:block;margin:0 auto 6px}
+.badge{display:inline-block;background:var(--day);color:#fff;font-family:'Fredoka',system-ui,sans-serif;font-weight:600;font-size:18px;padding:4px 16px;border-radius:999px}
+header h1{margin:8px 0 4px;font-size:clamp(28px,5vw,40px);color:var(--navy)}
+.skills{margin:6px 0 0}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:14px;font-weight:700;margin:3px 3px}
+.p-prose{background:#ffe6e8;color:#a3212c}
+.p-vocab{background:#e2efff;color:#1a5fa8}
+.namebox{background:var(--card);border-radius:18px;padding:14px 16px;margin:14px 0;display:flex;gap:10px;align-items:center;flex-wrap:wrap;box-shadow:0 2px 0 var(--line)}
+.namebox label{font-weight:700}
+.namebox input{flex:1;min-width:180px;font-size:18px;padding:10px 12px;border:2px solid var(--line);border-radius:12px;font-family:inherit}
+.directions{background:var(--gold-soft);border:2px dashed var(--gold);border-radius:18px;padding:12px 16px;margin:10px 0 16px}
+.directions ul{margin:6px 0 0;padding-left:4px;list-style:none}
+.directions li{margin:4px 0}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:6px 0 12px;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:5}
+.keys{display:flex;gap:4px;font-size:24px}
+.keys span{filter:grayscale(1) opacity(.35)}
+.keys span.on{filter:none}
+.btn{font-family:'Fredoka',system-ui,sans-serif;font-weight:600;font-size:17px;border:none;border-radius:14px;padding:10px 16px;cursor:pointer;background:var(--navy);color:#fff}
+.btn.light{background:#fff;color:var(--navy);box-shadow:0 2px 0 var(--line)}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.box{background:var(--card);border-radius:20px;padding:18px;margin:0 0 16px;box-shadow:0 3px 0 var(--line)}
+.review{border-left:10px solid var(--day)}
+.review h2{margin:0 0 8px;color:var(--navy);font-size:24px}
+.tip{margin:10px 0;padding:10px 12px;border-radius:14px}
+.tip.prose{background:#fff1f2}
+.tip.vocab{background:#eef5ff}
+.tip b.h{font-family:'Fredoka',system-ui,sans-serif;font-weight:600;font-size:19px}
+.tip ul{margin:6px 0 0 0;padding-left:22px}
+.ptitle{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.ptitle h2{margin:0;color:var(--navy);font-size:24px}
+#ptext p{margin:0 0 12px}
+#ptext h3{margin:16px 0 6px;color:var(--navy)}
+.poem{white-space:pre-line;font-size:19px;background:#fbfaff;border-radius:14px;padding:12px 16px;border:2px solid var(--line);margin:0 0 12px}
+.note{font-size:15px;color:var(--muted);font-style:italic}
+.speak{border:none;background:#eef0ff;border-radius:12px;padding:8px 12px;font-size:16px;cursor:pointer;font-family:'Fredoka',system-ui,sans-serif;color:var(--navy);flex-shrink:0}
+.q{background:var(--card);border-radius:20px;padding:18px;margin:0 0 16px;box-shadow:0 3px 0 var(--line)}
+.qhead{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.qnum{font-family:'Fredoka',system-ui,sans-serif;font-weight:700;color:var(--navy);font-size:20px}
+.qtext{font-weight:700;margin:6px 0 12px}
+.opt{display:block;width:100%;text-align:left;font-family:inherit;font-size:18px;padding:12px 14px;margin:8px 0;border-radius:14px;border:3px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+.opt b{font-family:'Fredoka',system-ui,sans-serif;margin-right:6px;color:var(--navy)}
+.opt:disabled{cursor:default}
+.opt.correct{border-color:var(--green);background:var(--green-soft)}
+.opt.wrong{border-color:var(--red);background:var(--red-soft)}
+.fb{margin-top:10px;padding:12px 14px;border-radius:14px;font-size:17px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.fb.good{background:var(--green-soft);border:2px solid var(--green)}
+.fb.bad{background:var(--red-soft);border:2px solid var(--red)}
+.done{text-align:center;background:linear-gradient(135deg,#fff7df,#f0e9ff);border:3px solid var(--gold)}
+.done .big{font-family:'Fredoka',system-ui,sans-serif;font-size:40px;font-weight:700;color:var(--navy)}
+footer{text-align:center;color:var(--muted);font-size:14px;padding:20px 0 40px}
+.tbtn{background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:14px;font-family:inherit}
+.key table{width:100%;border-collapse:collapse;font-size:16px}
+.key td,.key th{border-bottom:1px solid var(--line);padding:6px;text-align:left;vertical-align:top}
+.hidden{display:none!important}
+canvas#confetti{position:fixed;inset:0;pointer-events:none;z-index:50}
+@media (max-width:520px){body{font-size:17px}.box,.q{padding:14px}}
+</style>
+</head>
+<body>
+<canvas id="confetti"></canvas>
+<header>
+  <img id="logo" src="logo.png" alt="The Literacy Locksmith" onerror="this.style.display='none'">
+  <span class="badge">🔔 Bell Work · Day 6</span>
+  <h1>Then vs. Now & Mixed Review</h1>
+  <div class="skills" id="skills"></div>
+</header>
+
+<div class="wrap">
+ <section id="student">
+  <div class="namebox">
+    <label for="name">✏️ First name &amp; last initial:</label>
+    <input id="name" autocomplete="off" placeholder="Example: Maya R.">
+  </div>
+  <div class="directions">
+    <b>📱 Bell Work Directions:</b>
+    <ul>
+      <li>1️⃣ Read the 🔑 <b>Quick Review</b> first. It's your cheat code!</li>
+      <li>2️⃣ Read the passage. Tap 🔊 if you want it read to you.</li>
+      <li>3️⃣ Tap your answer. You get <b>ONE try</b>, so look back at the text first! 👀</li>
+      <li>4️⃣ Tap 🔊 on the explanation to hear why.</li>
+      <li>5️⃣ Your work saves on your iPad automatically. 💾</li>
+      <li>6️⃣ When you finish, take a screenshot 📸 of your score and turn it in on Canvas.</li>
+    </ul>
+  </div>
+  <div class="topbar"><b style="font-family:'Fredoka',system-ui,sans-serif;color:var(--navy)">Keys unlocked:</b><div class="keys" id="keys"></div></div>
+  <div id="content"></div>
+ </section>
+
+ <section id="teacher" class="hidden">
+  <div class="box key">
+    <div class="ptitle"><h2>🧑‍🏫 Teacher Answer Key: Day 6</h2><button class="btn light" onclick="closeTeacher()">Close</button></div>
+    <div id="keytable"></div>
+    <p style="margin-top:16px"><button class="btn gold" onclick="resetAll()">🔄 Reset this iPad (clears saved answers for this day)</button></p>
+  </div>
+ </section>
+
+ <footer>
+  Grade 6 ELA · Florida B.E.S.T. Standards<br>
+  <button class="tbtn" onclick="openTeacher()">Teacher</button>
+ </footer>
+</div>
+
+<script>
+/* ===== BELL WORK DAY 6 CONTENT ===== */
+const DAY_NUM = 6;
+const D = {"title": "Then vs. Now & Mixed Review", "skills": [["vocab", "ELA.6.R.3.3 Compare Authors Across Time"], ["prose", "ELA.6.R.1.2 Theme"], ["vocab", "ELA.6.R.3.1 Figurative Language"]], "review": [["vocab", "⏳ Comparing Texts From Different Times", "When two authors from different time periods write about the same topic, compare:", ["📌 <b>Topic:</b> What are both texts about?", "🤝 <b>Same:</b> What do both authors think or feel?", "↔️ <b>Different:</b> How was life different then? How is the word choice different (formal vs. casual)?"]], ["prose", "💡 Theme Check", "A theme can show up in more than one text. Look for the lesson BOTH authors would agree on.", []]], "passageTitle": "Faraway Friends: Then and Now", "passage": "<h3>Text 1: A Letter to a Friend</h3>\n<p class=\"note\">A fictional letter written in the style of the early 1900s, when letters could take weeks to arrive</p>\n<p>My dearest Emma,</p>\n<p>It has been three weeks since your last letter arrived, and I have read it so many times that the paper is soft as cloth. The days are long without you here. Though the miles between us are many, my affection for you has not lessened in the slightest. I wait for the postman each afternoon, for his bag may hold <b>a piece of your heart</b>.</p>\n<p>Your devoted friend,<br>Rose</p>\n<h3>Text 2: My Best Friend Moved</h3>\n<p class=\"note\">A blog post written by a sixth grader today</p>\n<p>My best friend Aaliyah moved to Texas last summer. We video chat almost every night and send each other funny memes all day. Sometimes the messages come so fast that I forget to really talk to her. But last week she mailed me a handwritten card, and I've kept it on my desk ever since. Even with phones, distance can't break a real friendship.</p>\n<p>— Marcus, 6th grade</p>", "qs": [{"t": "vocab", "q": "What topic do BOTH texts address?", "o": ["Moving to Texas", "Staying friends with someone who lives far away", "Working at the post office", "Sending funny memes"], "a": 1, "e": "Rose writes to Emma far away, and Marcus talks to Aaliyah in Texas. Both are about long-distance friendship."}, {"t": "vocab", "q": "How are the two authors' feelings ALIKE?", "o": ["Both are glad their friends moved away.", "Both care deeply about their friends even though they are apart.", "Both forgot about their friends.", "Both prefer phones to letters."], "a": 1, "e": "Rose's affection “has not lessened,” and Marcus says distance “can't break a real friendship.”"}, {"t": "vocab", "q": "How is the way they communicate DIFFERENT?", "o": ["Rose waits weeks for letters, while Marcus can talk to his friend instantly by phone.", "Rose uses video chat, while Marcus waits for the postman.", "Neither author communicates with their friend.", "They both only send memes."], "a": 0, "e": "The time period matters! In the early 1900s, letters took weeks. Today, Marcus can chat in seconds."}, {"t": "vocab", "q": "How does the time period affect each author's word choice?", "o": ["Both use modern slang.", "Rose uses formal, old-fashioned words like “affection” and “devoted,” while Marcus uses casual, everyday words.", "Marcus uses old-fashioned words, while Rose uses slang.", "There is no difference in their word choice."], "a": 1, "e": "People wrote more formally long ago. Marcus writes the way kids talk today (“funny memes”)."}, {"t": "vocab", "q": "Rose says the postman's bag “may hold <b>a piece of your heart</b>.” What does she mean?", "o": ["The postman is carrying a real heart.", "The bag might hold a letter full of Emma's love and feelings.", "Emma is sick.", "The postman is Emma's friend."], "a": 1, "e": "It's a metaphor. A letter from Emma would carry her feelings, like a piece of her heart."}, {"t": "prose", "q": "Which theme fits BOTH texts?", "o": ["Technology makes friendship easy.", "True friendship can last even when friends are far apart.", "Letters are better than phones.", "It's best to make new friends when someone moves."], "a": 1, "e": "Rose and Marcus are both far from their friends, but both friendships stay strong."}]};
+
+/* Mix up answer positions (same order every time, so the teacher key always matches) */
+(function(){
+  let seed = 49540;
+  const rnd = ()=>{ seed = (seed*1103515245+12345) % 2147483648; return seed/2147483648; };
+  D.qs.forEach(q=>{
+    const idx = q.o.map((_,k)=>k);
+    for(let k=idx.length-1;k>0;k--){ const r=Math.floor(rnd()*(k+1)); [idx[k],idx[r]]=[idx[r],idx[k]]; }
+    q.o = idx.map(k=>q.o[k]); q.a = idx.indexOf(q.a);
+  });
+})();
+
+/* ===== AUTOSAVE (saves on this iPad) ===== */
+const SKEY = "llBellWork_day" + DAY_NUM + "_v1";
+let state = {name:"", ans:D.qs.map(()=>null)};
+try{ const s = JSON.parse(localStorage.getItem(SKEY)); if(s && Array.isArray(s.ans) && s.ans.length===D.qs.length) state = s; }catch(e){}
+try{ if(!state.name){ state.name = localStorage.getItem("llBellWork_name") || ""; } }catch(e){}
+function save(){ try{ localStorage.setItem(SKEY, JSON.stringify(state)); localStorage.setItem("llBellWork_name", state.name||""); }catch(e){} }
+
+const nameEl = document.getElementById("name");
+nameEl.value = state.name || "";
+nameEl.addEventListener("input", ()=>{ state.name = nameEl.value; save(); });
+
+/* ===== RENDER ===== */
+const L = "ABCD";
+function pillFor(t){ return t==="prose" ? '<span class="pill p-prose">📖 Reading Prose &amp; Poetry</span>' : '<span class="pill p-vocab">🔤 Reading Across Genres &amp; Vocabulary</span>'; }
+document.getElementById("skills").innerHTML = D.skills.map(k=>`<span class="pill ${k[0]==='prose'?'p-prose':'p-vocab'}">${k[1]}</span>`).join("");
+
+function render(){
+  let h = `<div class="box review"><h2>🔑 Quick Review</h2>`;
+  D.review.forEach(r=>{
+    h += `<div class="tip ${r[0]}"><b class="h">${r[1]}</b><div>${r[2]}</div>${r[3].length?'<ul>'+r[3].map(x=>'<li>'+x+'</li>').join('')+'</ul>':''}</div>`;
+  });
+  h += `</div>`;
+  h += `<div class="box"><div class="ptitle"><h2>📖 ${D.passageTitle}</h2><button class="speak" onclick="speakEl('ptext')">🔊 Read to me</button></div><div id="ptext">${D.passage}</div></div>`;
+  D.qs.forEach((q,i)=>{
+    h += `<div class="q"><div class="qhead"><div><span class="qnum">Question ${i+1}</span> ${pillFor(q.t)}</div><button class="speak" onclick="speakQ(${i})" aria-label="Read question">🔊</button></div>
+      <div class="qtext">${q.q}</div>
+      ${q.o.map((o,j)=>`<button class="opt" id="o${i}_${j}" onclick="answer(${i},${j})"><b>${L[j]}</b> ${o}</button>`).join("")}
+      <div id="fb${i}"></div></div>`;
+  });
+  h += `<div id="donebox"></div>`;
+  document.getElementById("content").innerHTML = h;
+  D.qs.forEach((q,i)=>{ if(state.ans[i]!=null) showResult(i,state.ans[i],false); });
+  updateKeys(); checkDone(false);
+}
+function answer(i,j){
+  if(state.ans[i]!=null) return;  // one try only
+  state.ans[i]=j; save();
+  showResult(i,j,true); updateKeys(); checkDone(true);
+}
+function showResult(i,j,fresh){
+  const q = D.qs[i];
+  q.o.forEach((_,k)=>{ const b=document.getElementById(`o${i}_${k}`); b.disabled=true;
+    if(k===q.a) b.classList.add("correct"); else if(k===j) b.classList.add("wrong"); });
+  const ok = j===q.a;
+  document.getElementById("fb"+i).innerHTML = `<div class="fb ${ok?'good':'bad'}"><div id="fbt${i}"><b>${ok?'✅ You got it!':'❌ Not quite. The answer is '+L[q.a]+'.'}</b> ${q.e}</div><button class="speak" onclick="speakFb(${i})" aria-label="Read the explanation">🔊</button></div>`;
+  if(fresh && ok) miniBurst(document.getElementById(`o${i}_${j}`));
+}
+function score(){ let c=0,n=0; D.qs.forEach((q,i)=>{ if(state.ans[i]!=null){ n++; if(state.ans[i]===q.a) c++; } }); return {c,n,t:D.qs.length}; }
+function updateKeys(){ document.getElementById("keys").innerHTML = D.qs.map((q,i)=>`<span class="${state.ans[i]===q.a?'on':''}">🔑</span>`).join(""); }
+function checkDone(fresh){
+  const s = score(), box = document.getElementById("donebox");
+  if(s.n<s.t){ box.innerHTML=""; return; }
+  const msg = s.c===s.t ? "PERFECT! Every key unlocked! 🏆" : s.c>=4 ? "Great job! You're ready! 🌟" : "Nice work finishing! Read the explanations again before test day. 💪";
+  box.innerHTML = `<div class="box done"><div class="big">🔑 ${s.c} / ${s.t}</div><p style="font-size:20px;font-weight:700">${msg}</p>
+    <p>👤 ${esc(state.name||"(type your name at the top)")} · Bell Work Day ${DAY_NUM}: ${D.title}</p>
+    <p>📸 Take a screenshot of this box and turn it in on Canvas.</p></div>`;
+  if(fresh){ setTimeout(()=>box.scrollIntoView({behavior:"smooth",block:"center"}),300); bigConfetti(); }
+}
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+
+/* ===== TEACHER (code: locksmith) ===== */
+function openTeacher(){
+  const code = prompt("Teacher code:");
+  if(!code || code.trim().toLowerCase()!=="locksmith") return;
+  stopSpeak();
+  let h = `<p style="font-size:15px;color:var(--muted)">${D.skills.map(k=>k[1]).join(" · ")}</p><table><tr><th>#</th><th>Answer</th><th>Skill</th><th>Why</th></tr>`;
+  D.qs.forEach((q,i)=>{ h += `<tr><td>${i+1}</td><td><b>${L[q.a]}</b></td><td>${q.t==='prose'?'Prose &amp; Poetry':'Across Genres &amp; Vocab'}</td><td>${q.e}</td></tr>`; });
+  document.getElementById("keytable").innerHTML = h + `</table>`;
+  document.getElementById("student").classList.add("hidden");
+  document.getElementById("teacher").classList.remove("hidden");
+  scrollTo(0,0);
+}
+function closeTeacher(){ document.getElementById("teacher").classList.add("hidden"); document.getElementById("student").classList.remove("hidden"); }
+function resetAll(){
+  if(!confirm("Clear the saved answers for this day on this iPad?")) return;
+  state = {name:state.name, ans:D.qs.map(()=>null)}; save(); closeTeacher(); render(); scrollTo(0,0);
+}
+
+/* ===== READ-ALOUD (Google US English voice) ===== */
+let voice = null;
+function pickVoice(){
+  const vs = speechSynthesis.getVoices();
+  voice = vs.find(v=>v.name==="Google US English") || vs.find(v=>/google/i.test(v.name)&&v.lang==="en-US") || vs.find(v=>v.lang==="en-US") || null;
+}
+if("speechSynthesis" in window){ pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+function clean(t){ return t.replace(/ELA\.\d+\.[A-Z]+\.\d+(\.\d+)?/g,"").replace(/[✅❌🔑]/g,"").replace(/[—–]/g,", ").replace(/\s+/g," ").trim(); }
+function speak(text){
+  if(!("speechSynthesis" in window)) return;
+  speechSynthesis.cancel();
+  const parts = clean(text).match(/[^.!?]+[.!?”"]*\s*/g) || [text];
+  parts.forEach(p=>{ const u = new SpeechSynthesisUtterance(p); if(voice) u.voice=voice; u.lang="en-US"; u.rate=0.95; speechSynthesis.speak(u); });
+}
+function stopSpeak(){ try{ speechSynthesis.cancel(); }catch(e){} }
+function speakEl(id){
+  const el = document.getElementById(id).cloneNode(true);
+  el.querySelectorAll("h3,p,div").forEach(n=>n.append(". "));
+  el.querySelectorAll(".poem").forEach(n=>{ n.textContent = n.textContent.replace(/\n/g,", "); });
+  speak(el.textContent);
+}
+function speakQ(i){
+  const q = D.qs[i], tmp = document.createElement("div"); tmp.innerHTML = q.q;
+  let t = "Question " + (i+1) + ". " + tmp.textContent + " ";
+  q.o.forEach((o,j)=>{ t += " " + L[j] + ". " + o + (/[.!?”]$/.test(o)?" ":". "); });
+  speak(t);
+}
+function speakFb(i){ speak(document.getElementById("fbt"+i).textContent); }
+
+/* ===== CONFETTI ===== */
+const cv = document.getElementById("confetti"), cx = cv.getContext("2d");
+let bits = [], running = false;
+function sizeCv(){ cv.width = innerWidth; cv.height = innerHeight; }
+sizeCv(); addEventListener("resize", sizeCv);
+const COLORS = ["#e8505b","#f28c28","#f2b632","#2fb380","#2f8fe0","#8b5cf6"];
+function addBits(x,y,n,spread,power){
+  for(let k=0;k<n;k++){ const a = Math.random()*Math.PI*2, s = Math.random()*power;
+    bits.push({x,y,vx:Math.cos(a)*s*spread,vy:Math.sin(a)*s-power*0.6,r:4+Math.random()*5,c:COLORS[k%6],rot:Math.random()*6,vr:(Math.random()-.5)*.3,life:0}); }
+  if(!running){ running=true; requestAnimationFrame(tick); }
+}
+function tick(){
+  cx.clearRect(0,0,cv.width,cv.height);
+  bits.forEach(b=>{ b.vy+=0.25; b.vx*=0.99; b.x+=b.vx; b.y+=b.vy; b.rot+=b.vr; b.life++;
+    cx.save(); cx.translate(b.x,b.y); cx.rotate(b.rot); cx.fillStyle=b.c; cx.fillRect(-b.r/2,-b.r/4,b.r,b.r/2); cx.restore(); });
+  bits = bits.filter(b=>b.y<cv.height+30 && b.life<400);
+  if(bits.length) requestAnimationFrame(tick); else { running=false; cx.clearRect(0,0,cv.width,cv.height); }
+}
+function miniBurst(el){ const r = el.getBoundingClientRect(); addBits(r.left+r.width/2, r.top+r.height/2, 30, 1, 9); }
+function bigConfetti(){ let n=0; const iv = setInterval(()=>{ addBits(Math.random()*innerWidth, innerHeight*0.25, 70, 1.2, 14); if(++n>5) clearInterval(iv); }, 250); }
+
+render();
+</script>
+</body>
+</html>
